@@ -41,12 +41,13 @@ describe Queue do
   end
 
   describe "#queue behavior" do
-    it "removes oldest item in the queue"
+    it "removes oldest item in the queue" do
       @queue.enqueue("breakfast")
       @queue.enqueue("lunch")
       @queue.dequeue.should == "breakfast"
     end
   end
+end
 
 
 
