@@ -23,7 +23,11 @@ describe Queue do
     end
   end
 
-  describe "#dequeue" do 
+  describe "#dequeue" do
+    it "should not remove items from a queue with no items" do
+      @queue.dequeue.should == nil
+    end
+
     it "should remove items" do
       @queue.enqueue("facebook")
       @queue.enqueue("myspace")
